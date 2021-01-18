@@ -156,14 +156,6 @@ public class UpdatesActivity extends UpdatesListActivity {
         headerBuildDate.setText(StringGenerator.getDateLocalizedUTC(this,
                 DateFormat.LONG, BuildInfoUtils.getBuildDateTimestamp()));
 
-        final TextView headerBuildVersion = (TextView) findViewById(R.id.header_build_version);
-        headerBuildVersion.setText(
-                getString(R.string.header_android_version, Build.VERSION.RELEASE));
-
-        final TextView headerDeviceName = (TextView) findViewById(R.id.header_device_name);
-        headerDeviceName.setText(
-                getString(R.string.list_device_name, BuildInfoUtils.getDevice()));
-
         // Switch between header title and appbar title minimizing overlaps
         final CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
